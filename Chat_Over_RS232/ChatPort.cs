@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO.Ports;
 using System.IO;
-using System.Reflection;
-using System.Windows.Forms;
 
 namespace Computer_RS232_Chat_.NET
 {
@@ -23,8 +20,13 @@ namespace Computer_RS232_Chat_.NET
             else
                 DataBits = 7;
 
-            BaudRate = client.Baud;
-           
+            if (client.Baud != 0)
+                BaudRate = client.Baud;
+            else if (client.Baud == 0)
+                BaudRate = 9600;
+            else
+                throw new MissingFieldException();
+
             DataReceived += new SerialDataReceivedEventHandler(DataAvailable);
 
             usingClient = client;
@@ -35,8 +37,7 @@ namespace Computer_RS232_Chat_.NET
         {
                 char[] buffer = new char[1];
                 string temp = string.Empty;
-                
-                
+                               
                 Read(buffer,0,1);
                 
                 temp = temp + buffer[0];
