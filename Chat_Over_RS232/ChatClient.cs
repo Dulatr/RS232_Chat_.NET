@@ -84,7 +84,7 @@ namespace Computer_RS232_Chat_.NET
 
         private void OpenPortBttn_Click(object sender, EventArgs e)
         {
-
+            
             try
             {
                 if (chatPort == null)
@@ -133,7 +133,8 @@ namespace Computer_RS232_Chat_.NET
                         BaudBx.Enabled = true;
                         ParityBx.Enabled = true;
                         PortBx.Enabled = true;
-                        PortActivePic.BackColor = Color.Red;        
+                        PortActivePic.BackColor = Color.Red;
+                        chatPort.Dispose();
                     }
                     catch (IOException ex)
                     {
