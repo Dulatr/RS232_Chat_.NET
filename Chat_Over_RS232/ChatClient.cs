@@ -60,7 +60,9 @@ namespace Computer_RS232_Chat_.NET
                 {
                     char[] toSend = new char[TxtToSendBx.Text.Length]; //how many characters to add to buffer?
                     bool baudSel = baud > 9600;                        //is the baud above a rate where we can reduce the time for this thread to sleep?
-
+                    
+                    TxtRecievedBx.Clear();
+                    
                     for (int i = 0; i < TxtToSendBx.Text.Length; i++)
                     {
                         toSend[i] = TxtToSendBx.Text[i];
@@ -69,10 +71,10 @@ namespace Computer_RS232_Chat_.NET
                         switch (baudSel)
                         {
                             case true:
-                                Thread.Sleep(5);
+                                Thread.Sleep(7);
                                 break;
                             default:
-                                Thread.Sleep(7);
+                                Thread.Sleep(10);
                                 break;
                         }
                     }                   
