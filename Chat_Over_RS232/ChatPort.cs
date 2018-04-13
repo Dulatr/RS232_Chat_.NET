@@ -15,8 +15,8 @@ namespace Computer_RS232_Chat_.NET
         private readonly object noInterupt = new object();
 
         private ChatClient usingClient;
-        private Type methodChecker = Type.GetType("Computer_RS232_Chat_.NET.ChatClient");
-        private MethodInfo methodInfo;
+        //private Type methodChecker = Type.GetType("Computer_RS232_Chat_.NET.ChatClient");
+        //private MethodInfo methodInfo;
 
         public ChatPort( string com, ChatClient client) : base(com)
         {
@@ -33,29 +33,21 @@ namespace Computer_RS232_Chat_.NET
 
             usingClient = client;
 
-            methodInfo = methodChecker.GetMethod("DataRecieved");
-            //MessageBox.Show(String.Format("method signature <{0}> {1}(string s)", methodInfo.ReturnType.ToString(), methodInfo.Name));
         }
         
         private void DataAvailable(object sender,SerialDataReceivedEventArgs e)
         {
                 char[] buffer = new char[1];
-                string temp = "";
-                //IntPtr myMethod = methodInfo.MethodHandle.GetFunctionPointer();
-
+                string temp = string.Empty;
+                
                 Read(buffer,0,1);
             
-                for(int i = 0;i<buffer.Length;i++){
-                    temp = temp + buffer[i];
-                }
+                temp = temp + buffer[0];
                 
                 if (usingClient != null)
                     usingClient.BeginInvoke(new ChatClient.DataReady(usingClient.DataRecieved), temp);
-                else if(usingClient == null)
+                else
                     throw new ArgumentNullException("Client reference passed is null.");
-                //else if (methodInfo == null) 
-                //    throw new MissingMethodException(String.Format("Missing Client method of signature {0} {1} (string s)",methodInfo.ReturnType.ToString(),methodInfo.Name));        
-
         }
     }
 }
