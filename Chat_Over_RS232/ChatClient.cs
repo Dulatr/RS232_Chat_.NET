@@ -87,12 +87,14 @@ namespace Computer_RS232_Chat_.NET
 
             try
             {
-                if(chatPort == null)
-                    chatPort = new ChatPort(PortBx.Text,this);           
+                if (chatPort == null)
+                {
+                    chatPort = new ChatPort(PortBx.Text,this);
+                }
             }
             catch(IOException ex)
             {
-                MessageBox.Show(ex.Message);                
+                MessageBox.Show(ex.Message);
                 return;
             }
 
@@ -103,11 +105,17 @@ namespace Computer_RS232_Chat_.NET
                     try
                     {
                         chatPort.Open();
+                        BaudBx.Enabled = false;
+                        ParityBx.Enabled = false;
+                        PortBx.Enabled = false;
                         PortActivePic.BackColor = Color.Green;                        
                     }
                     catch (IOException ex)
                     {
                         MessageBox.Show(ex.Message);
+                        BaudBx.Enabled = true;
+                        ParityBx.Enabled = true;
+                        PortBx.Enabled = true;
                         PortActivePic.BackColor = Color.Red;        
                     }
                 }
@@ -122,11 +130,17 @@ namespace Computer_RS232_Chat_.NET
                     try
                     {
                         chatPort.Close();
+                        BaudBx.Enabled = true;
+                        ParityBx.Enabled = true;
+                        PortBx.Enabled = true;
                         PortActivePic.BackColor = Color.Red;        
                     }
                     catch (IOException ex)
                     {
                         MessageBox.Show(ex.Message);
+                        BaudBx.Enabled = false;
+                        ParityBx.Enabled = false;
+                        PortBx.Enabled = false;
                         PortActivePic.BackColor = Color.Green;        
                     }
                 }                
