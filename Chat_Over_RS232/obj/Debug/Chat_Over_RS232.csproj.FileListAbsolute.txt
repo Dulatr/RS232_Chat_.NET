@@ -27,12 +27,12 @@ C:\Users\Tyler Dula\Downloads\Chat_Over_RS232\Chat_Over_RS232\obj\Debug\Chat_Ove
 C:\Users\Tyler Dula\Downloads\Chat_Over_RS232\Chat_Over_RS232\obj\Debug\Chat_Over_RS232.exe
 C:\Users\Tyler Dula\Downloads\Chat_Over_RS232\Chat_Over_RS232\obj\Debug\Chat_Over_RS232.pdb
 C:\Users\Tyler Dula\Downloads\Chat_Over_RS232\Chat_Over_RS232\obj\Debug\Chat_Over_RS232.csprojResolveAssemblyReference.cache
+C:\Users\W7F10S11\Downloads\Chat_Over_RS232\Chat_Over_RS232\Chat_Over_RS232\bin\Debug\Chat_Over_RS232.exe.config
+C:\Users\W7F10S11\Downloads\Chat_Over_RS232\Chat_Over_RS232\Chat_Over_RS232\bin\Debug\Chat_Over_RS232.exe
+C:\Users\W7F10S11\Downloads\Chat_Over_RS232\Chat_Over_RS232\Chat_Over_RS232\bin\Debug\Chat_Over_RS232.pdb
 C:\Users\W7F10S11\Downloads\Chat_Over_RS232\Chat_Over_RS232\Chat_Over_RS232\obj\Debug\Computer_RS232_Chat_.NET.ChatClient.resources
 C:\Users\W7F10S11\Downloads\Chat_Over_RS232\Chat_Over_RS232\Chat_Over_RS232\obj\Debug\Computer_RS232_Chat_.NET.ChatPort.resources
 C:\Users\W7F10S11\Downloads\Chat_Over_RS232\Chat_Over_RS232\Chat_Over_RS232\obj\Debug\Computer_RS232_Chat_.NET.Properties.Resources.resources
 C:\Users\W7F10S11\Downloads\Chat_Over_RS232\Chat_Over_RS232\Chat_Over_RS232\obj\Debug\Chat_Over_RS232.csproj.GenerateResource.Cache
-C:\Users\W7F10S11\Downloads\Chat_Over_RS232\Chat_Over_RS232\Chat_Over_RS232\bin\Debug\Chat_Over_RS232.exe.config
-C:\Users\W7F10S11\Downloads\Chat_Over_RS232\Chat_Over_RS232\Chat_Over_RS232\bin\Debug\Chat_Over_RS232.exe
-C:\Users\W7F10S11\Downloads\Chat_Over_RS232\Chat_Over_RS232\Chat_Over_RS232\bin\Debug\Chat_Over_RS232.pdb
 C:\Users\W7F10S11\Downloads\Chat_Over_RS232\Chat_Over_RS232\Chat_Over_RS232\obj\Debug\Chat_Over_RS232.exe
 C:\Users\W7F10S11\Downloads\Chat_Over_RS232\Chat_Over_RS232\Chat_Over_RS232\obj\Debug\Chat_Over_RS232.pdb
