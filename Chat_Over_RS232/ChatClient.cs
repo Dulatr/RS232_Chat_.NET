@@ -42,7 +42,6 @@ namespace Computer_RS232_Chat_.NET
             ParityBx.SelectedIndex = 0;
 
             BaudBx.SelectedIndex = BaudBx.Items.IndexOf("9600");
-
         }
 
         private void TxtToSendBx_KeyDown(object sender, KeyEventArgs e)
@@ -59,14 +58,14 @@ namespace Computer_RS232_Chat_.NET
                 
                 if(chatPort != null && chatPort.IsOpen)
                 {
-                    TxtRecievedBx.Clear();
-                    char[] toSend = new char[TxtToSendBx.Text.Length];
-                    bool baudSel = baud > 9600;
+                    char[] toSend = new char[TxtToSendBx.Text.Length]; //how many characters to add to buffer?
+                    bool baudSel = baud > 9600;                        //is the baud above a rate where we can reduce the time for this thread to sleep?
 
                     for (int i = 0; i < TxtToSendBx.Text.Length; i++)
                     {
                         toSend[i] = TxtToSendBx.Text[i];
                         chatPort.Write(toSend,i,1);
+
                         switch (baudSel)
                         {
                             case true:
@@ -76,7 +75,6 @@ namespace Computer_RS232_Chat_.NET
                                 Thread.Sleep(7);
                                 break;
                         }
-
                     }                   
                 }
             }
