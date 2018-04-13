@@ -12,11 +12,7 @@ namespace Computer_RS232_Chat_.NET
 {
     class ChatPort : SerialPort
     {
-        private readonly object noInterupt = new object();
-
         private ChatClient usingClient;
-        //private Type methodChecker = Type.GetType("Computer_RS232_Chat_.NET.ChatClient");
-        //private MethodInfo methodInfo;
 
         public ChatPort( string com, ChatClient client) : base(com)
         {
@@ -32,7 +28,7 @@ namespace Computer_RS232_Chat_.NET
             DataReceived += new SerialDataReceivedEventHandler(DataAvailable);
 
             usingClient = client;
-
+            
         }
         
         private void DataAvailable(object sender,SerialDataReceivedEventArgs e)
@@ -40,8 +36,9 @@ namespace Computer_RS232_Chat_.NET
                 char[] buffer = new char[1];
                 string temp = string.Empty;
                 
+                
                 Read(buffer,0,1);
-            
+                
                 temp = temp + buffer[0];
                 
                 if (usingClient != null)
