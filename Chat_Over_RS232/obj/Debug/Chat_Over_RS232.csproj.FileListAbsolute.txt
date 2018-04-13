@@ -36,3 +36,4 @@ C:\Users\W7F10S11\Downloads\Chat_Over_RS232\Chat_Over_RS232\Chat_Over_RS232\obj\
 C:\Users\W7F10S11\Downloads\Chat_Over_RS232\Chat_Over_RS232\Chat_Over_RS232\obj\Debug\Chat_Over_RS232.csproj.GenerateResource.Cache
 C:\Users\W7F10S11\Downloads\Chat_Over_RS232\Chat_Over_RS232\Chat_Over_RS232\obj\Debug\Chat_Over_RS232.exe
 C:\Users\W7F10S11\Downloads\Chat_Over_RS232\Chat_Over_RS232\Chat_Over_RS232\obj\Debug\Chat_Over_RS232.pdb
+C:\Users\W7F10S11\Downloads\Chat_Over_RS232\Chat_Over_RS232\Chat_Over_RS232\obj\Debug\Chat_Over_RS232.csprojResolveAssemblyReference.cache
