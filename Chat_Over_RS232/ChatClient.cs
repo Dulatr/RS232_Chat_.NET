@@ -30,7 +30,7 @@ namespace Computer_RS232_Chat_.NET
         private void MainForm_Load(object sender, EventArgs e)
         {
             PortBx.Items.AddRange(SerialPort.GetPortNames());
-
+            
             if (PortBx.Items.Count != 0)
                 PortBx.SelectedIndex = 0;
             else
