@@ -61,12 +61,22 @@ namespace Computer_RS232_Chat_.NET
                 {
                     TxtRecievedBx.Clear();
                     char[] toSend = new char[TxtToSendBx.Text.Length];
+                    bool baudSel = baud > 9600;
 
                     for (int i = 0; i < TxtToSendBx.Text.Length; i++)
                     {
                         toSend[i] = TxtToSendBx.Text[i];
                         chatPort.Write(toSend,i,1);
-                        Thread.Sleep(7);
+                        switch (baudSel)
+                        {
+                            case true:
+                                Thread.Sleep(5);
+                                break;
+                            default:
+                                Thread.Sleep(7);
+                                break;
+                        }
+
                     }                   
                 }
             }
@@ -125,8 +135,7 @@ namespace Computer_RS232_Chat_.NET
 
         private void ParityBx_SelectedIndexChanged(object sender, EventArgs e)
         {
-            parity = (Parity)ParityBx.Items[ParityBx.SelectedIndex];
-
+            parity = (Parity)ParityBx.Items[ParityBx.SelectedIndex]; //specific Enum is a value type. Object Collection must be cast as such
         }
         private void BaudBx_SelectedIndexChanged(object sender, EventArgs e)
         {
