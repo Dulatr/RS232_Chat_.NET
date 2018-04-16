@@ -221,6 +221,7 @@
             this.Controls.Add(this.TxtRecievedBx);
             this.Name = "ChatClient";
             this.Text = "Chat Application over RS232";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChatClient_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PortActivePic)).EndInit();
             this.ResumeLayout(false);

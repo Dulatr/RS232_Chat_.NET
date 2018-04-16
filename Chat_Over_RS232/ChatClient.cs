@@ -170,5 +170,16 @@ namespace Computer_RS232_Chat_.NET
         {
             get { return baud; }
         }
+
+        private void ChatClient_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (chatPort != null && chatPort.IsOpen)
+            {
+                chatPort.Close();
+                chatPort.Dispose();
+            }
+            else if(chatPort != null)
+                chatPort.Dispose();
+        }
     }   
 }
